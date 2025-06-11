@@ -1,0 +1,56 @@
+/* src/components/SuccessStories.css */
+
+.success-stories {
+  padding: 4rem 2rem;
+  background: #f9f9f9;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.success-stories h2 {
+  font-size: 2rem;
+  color: #163f8b;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.story-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.story-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  max-width: 320px;
+  transition: transform 0.3s ease;
+}
+
+.story-card:hover {
+  transform: translateY(-5px);
+}
+
+.story-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.story-card h3 {
+  font-size: 1.25rem;
+  color: #002855;
+  margin: 0.5rem 0;
+  font-weight: 600;
+}
+
+.story-card p {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.5;
+}

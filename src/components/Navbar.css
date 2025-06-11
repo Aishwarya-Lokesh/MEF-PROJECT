@@ -1,0 +1,106 @@
+.navbar {
+  background-color: #002b5c;
+  padding: 0.75rem 0;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem; 
+  list-style: none;
+  margin-left: 2rem;
+  flex-grow: 1;
+  justify-content: center;    /* horizontal centering */
+  min-width: 120px; 
+  height: 40px;
+  text-align: center;         /* center multiline words */
+
+}
+
+.navbar-links li a {
+   padding: 0.5rem 0.75rem;
+  margin: 0;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  display: inline-block;
+  text-align: center;
+  font-size: 0.95rem;
+   padding: 0.3rem 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-links li a:hover {
+  color: #ff9900;
+}
+
+.navbar-buttons {
+ display: flex;
+  align-items: center;
+  gap: 1rem; /* space between login and register */
+  margin-left: 2rem;
+}
+
+.login-btn,
+.register-btn {
+  padding: 0.4rem 1rem;
+  background-color: #ff9900;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-buttons button:hover {
+  background-color: #e88e00;
+  
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 1rem 0;
+  }
+
+  .navbar-buttons {
+    margin-top: 1rem;
+  }
+}
