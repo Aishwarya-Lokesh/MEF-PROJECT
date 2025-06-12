@@ -1,115 +1,151 @@
-/* src/pages/SuccessStories.css */
-
-.success-stories {
-  padding: 40px;
-  background-color: #f8f9fa;
+.success-section {
   font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #f0f2f5, #ffffff);
+  padding: 80px 20px;
+  color: #333;
+}
+
+.section-header {
   text-align: center;
+  margin-bottom: 60px;
 }
 
-.success-stories h1 {
-  color: #2c3e50;
-  margin-bottom: 30px;
-  font-size: 2.5rem;
+.section-header h1 {
+  font-size: 3rem;
+  color: #1a237e;
+  margin-bottom: 10px;
 }
 
-.stories-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.story-card {
-  background-color: #ffffff;
-  border-radius: 12px;
-  padding: 20px;
-  width: 300px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  text-align: left;
-  transition: transform 0.3s ease;
-}
-
-.story-card:hover {
-  transform: translateY(-5px);
-}
-
-.story-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.story-card h3 {
-  margin: 10px 0 5px;
-  color: #34495e;
-}
-
-.story-card p {
+.section-header p {
+  font-size: 1.1rem;
   color: #555;
-  font-size: 0.95rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.story-card button {
-  margin-top: 10px;
-  background-color: #0077cc;
-  color: white;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
+.stories-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
 }
 
-.story-card button:hover {
-  background-color: #005fa3;
-}
-
-/* Modal styling */
-.story-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+.story-panel {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 40px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+
+.from-left {
+  transform: translateX(-80px);
+}
+
+.from-right {
+  transform: translateX(80px);
+}
+
+.from-left.visible,
+.from-right.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.story-image img {
+  width: 340px;
+  height: 340px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+.story-text {
+  max-width: 600px;
+}
+
+.story-text h2 {
+  font-size: 2rem;
+  color: #1a237e;
+  margin-bottom: 10px;
+}
+
+.story-text h4 {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.short-story {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.story-text button {
+  margin-top: 10px;
+  background-color: #1a237e;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.story-text button:hover {
+  background-color: #0f153e;
+}
+
+/* Modal */
+.story-modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 999;
 }
 
 .modal-content {
-  background-color: #fff;
+  background: white;
   padding: 30px;
   border-radius: 12px;
-  width: 90%;
   max-width: 600px;
-  text-align: left;
+  width: 90%;
   position: relative;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .modal-content button {
   position: absolute;
   top: 15px;
-  right: 15px;
-  background-color: #e74c3c;
-  color: white;
+  right: 20px;
+  background: none;
   border: none;
-  font-size: 1rem;
-  padding: 5px 10px;
-  border-radius: 4px;
+  font-size: 1.5rem;
+  color: #888;
   cursor: pointer;
 }
 
-.modal-content h2 {
-  color: #2c3e50;
-  margin-bottom: 10px;
-}
+/* Responsive */
+@media (max-width: 768px) {
+  .story-panel {
+    flex-direction: column;
+    text-align: center;
+  }
 
-.modal-content p {
-  color: #555;
-  line-height: 1.6;
+  .story-image img {
+    width: 90%;
+    height: auto;
+  }
+
+  .story-text {
+    padding: 20px;
+  }
 }
