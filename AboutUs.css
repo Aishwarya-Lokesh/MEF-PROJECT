@@ -1,0 +1,205 @@
+/* AboutUs.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Playfair+Display:wght@600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f6fa;
+  color: #333;
+}
+
+.about-us {
+  overflow-x: hidden;
+}
+
+.about-hero {
+  background: url('../assets/about-bg.jpg') center/cover no-repeat;
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.about-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.about-hero p {
+  font-size: 1.25rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.vision-mission {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+.vm-card {
+  background-color: #fdfdfd;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 500px;
+  flex: 1;
+  transition: transform 0.3s;
+}
+
+.vm-card:hover {
+  transform: translateY(-5px);
+}
+
+.vm-card h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #0d47a1;
+  margin-bottom: 15px;
+}
+
+.vm-card p {
+  font-size: 1.05rem;
+  color: #444;
+  line-height: 1.7;
+}
+
+.council {
+  padding: 60px 20px;
+  background-color: #f0f4f8;
+  text-align: center;
+}
+
+.council h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #0d47a1;
+  margin-bottom: 40px;
+}
+
+.council-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.council-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 220px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  position: relative;
+}
+
+.council-card:hover {
+  transform: translateY(-7px);
+}
+
+.council-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.council-card h3 {
+  font-size: 1.2rem;
+  color: #222;
+  margin: 12px 0 5px;
+}
+
+.council-card p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.linkedin-icon {
+  color: #0a66c2;
+  font-size: 1.4rem;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  width: 80%;
+  max-width: 850px;
+  color: #111;
+  position: relative;
+  text-align: left;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content h3 {
+  font-size: 24px;
+  color: #0d47a1;
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.linkedin-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: #0a66c2;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 26px;
+  border: none;
+  background: none;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.close-btn:hover {
+  color: #222;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,279 @@
+/* EntrepreneurHub.css */
+
+:root {
+  --bg: #f8f9fa;
+  --text: #1a1a1a;
+  --primary: #2980b9;
+  --accent: #00796b;
+  --card-bg: #ffffff;
+}
+
+.entrepreneur-hub {
+  padding: 50px 20px;
+  background-color: var(--bg);
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+}
+
+.entrepreneur-hub h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.entrepreneur-hub p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.search-bar,
+.category-dropdown {
+  padding: 10px 15px;
+  margin: 0 10px 30px 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  max-width: 300px;
+  width: 100%;
+}
+
+.category-dropdown {
+  background: white;
+  cursor: pointer;
+}
+
+.entrepreneur-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.entrepreneur-card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  width: 300px;
+  padding: 25px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.entrepreneur-card:hover {
+  transform: translateY(-10px);
+}
+
+.entrepreneur-photo,
+.photo-placeholder {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 15px auto;
+}
+
+.photo-placeholder {
+  background: #dfe6e9;
+  color: #2d3436;
+  font-size: 32px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.keywords {
+  margin-top: 10px;
+}
+
+.keyword {
+  display: inline-block;
+  background: #e0f7fa;
+  color: var(--accent);
+  padding: 6px 12px;
+  margin: 4px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #34495e;
+  font-size: 1.4rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #0077b5;
+}
+
+.pagination {
+  margin: 30px 0;
+}
+
+.page-btn {
+  background: #ecf0f1;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.page-btn.active {
+  background: var(--primary);
+  color: white;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.modal.horizontal-modal {
+  display: flex;
+  flex-direction: row;
+  background: #fff;
+  width: 90%;
+  max-width: 900px;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+.modal-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 20px;
+  border-right: 1px solid #ddd;
+}
+
+.modal-photo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 30px auto 10px auto; /* <- Add top margin */
+  display: block;
+}
+
+
+.modal-placeholder {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #dfe6e9;
+  color: #2d3436;
+  font-size: 36px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.modal-right {
+  flex: 2;
+  padding-left: 30px;
+  text-align: left;
+}
+
+.modal-right h2 {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+}
+
+.modal-right .designation {
+  font-weight: 600;
+  color: #555;
+}
+
+.modal-right .location {
+  font-size: 0.95rem;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-weight: bold;
+  margin: 10px 0 4px;  /* Reduce top and bottom space */
+  font-size: 1rem;
+  color: #333;
+}
+
+.bio.italic {
+  font-style: italic;
+  color: #444;
+  margin: 5px 0;
+}
+
+.company-link {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 6px;
+  display: inline-block; /* ensures margin applies */
+}
+
+.company-info {
+  margin-top: 6px;  /* reduce from 10-15px */
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #333;
+  padding: 0 5px;
+  text-align: center;
+}
+
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: #999;
+}
+
+@media (max-width: 768px) {
+  .modal.horizontal-modal {
+    flex-direction: column;
+    max-height: 95vh;
+  }
+
+  .modal-left {
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    padding-right: 0;
+    padding-bottom: 20px;
+  }
+
+  .modal-right {
+    padding-left: 0;
+    padding-top: 20px;
+  }
+}
